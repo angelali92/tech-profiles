@@ -1,6 +1,12 @@
 source 'https://rubygems.org'
 
 
+# For Heroku
+gem 'rails_12factor', group: :production
+ruby '2.1.2'
+# For production
+gem 'thin', group: :production
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
 # Use postgresql as the database for Active Record
@@ -46,4 +52,3 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
