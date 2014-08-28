@@ -9,6 +9,13 @@ class ProfilesController < ApplicationController
 	end
 
 	def show
+		name = params[:name].gsub('+',' ')
+		@profile = Profile.find_by_name(name)
+
+		respond_to do |format|
+			format.html
+			format.json { render json: @profile }
+		end
 	end
 
 	def new
